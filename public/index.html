@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(211%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(241%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3ER%3C%2Ftext%3E%3C%2Fsvg%3E">
+<link rel="canonical" href="https://rizwanahmad201610-dev.github.io/rizwan-ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rizwan AI — Chat, Voice &amp; Create">
+<meta property="og:title" content="Rizwan AI — Chat, Voice &amp; Create">
+<meta property="og:description" content="Rizwan AI — independent creator studio with chat, voice and coding projects.">
+<meta property="og:url" content="https://rizwanahmad201610-dev.github.io/rizwan-ai/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Frizwanahmad201610-dev.github.io%2Frizwan-ai%2F?w=1200&h=630">
+<meta property="og:image:alt" content="Rizwan AI — Chat, Voice &amp; Create">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rizwan AI — Chat, Voice &amp; Create">
+<meta name="twitter:description" content="Rizwan AI — independent creator studio with chat, voice and coding projects.">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2Frizwanahmad201610-dev.github.io%2Frizwan-ai%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="Rizwan AI — Chat, Voice &amp; Create">
+
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071423"><meta name="description" content="Rizwan AI — independent creator studio with chat, voice and coding projects.">
+<title>Rizwan AI — Chat, Voice & Create</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><img src="assets/rizwan-avatar.webp" alt="Rizwan AI avatar"><div><b>Rizwan AI</b><span>CREATOR STUDIO</span></div></div>
+    <button class="mobile-close" id="close-menu" aria-label="Close menu">✕</button>
+    <div class="nav-label">YOUR WORKSPACE</div>
+    <nav aria-label="Main navigation">
+      <button class="nav active" data-page="chat"><span>◈</span> AI Chat</button>
+      <button class="nav" data-page="voice"><span>◉</span> Live Voice</button>
+      <button class="nav" data-page="web"><span>⌘</span> Website Creator</button>
+      <button class="nav" data-page="apps"><span>▣</span> Python & Java</button>
+      <button class="nav" data-page="projects"><span>▦</span> My Projects</button>
+      <button class="nav" data-page="profile"><span>☺</span> My Profile</button>
+      <button class="nav" data-page="settings"><span>⚙</span> AI Settings</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="connected"><span id="connection-dot" class="dot"></span><span id="connection-label">Checking connection...</span></div><p>Built by Rizwan • Independent project<br>AI replies use the connected provider.</p></div>
+  </aside>
+  <div class="layout">
+    <header class="topbar"><button id="open-menu" class="menu-button" aria-label="Open menu">☰</button><span id="page-heading">AI Chat</span><div class="righthead"><span class="version-pill">DEVICE-ONLY EDITION</span><img src="assets/rizwan-avatar.webp" alt="AI logo"></div></header>
+    <main>
+    <section class="screen active" id="screen-chat">
+      <div class="intro"><div class="eyebrow">YOUR EVERYDAY AI</div><h1>What's on your mind<span>?</span></h1><p>Ask, learn, create. Each visit begins fresh; save chats manually on this device.</p></div>
+      <div class="chat-layout"><aside class="chats-panel"><button id="new-chat" class="primary full">＋ New chat</button><div class="local-save-controls"><button id="save-chats" class="secondary">💾 Save Chats</button><button id="load-chats" class="secondary">↻ Load Saved Chats</button><button id="delete-saved-chats" class="secondary danger">Delete local save</button></div><h3>Conversations</h3><div id="chat-list" class="chat-list"></div><p class="micro">Chats start fresh each visit. Only Save Chats keeps a local copy on THIS device. Use Load Saved Chats to reopen them.</p></aside>
+        <div class="chat-box"><div id="chat-messages" class="messages" aria-live="polite"></div><div class="chat-status" id="chat-status">New session: chats reset on every visit unless you manually load saved chats. Enter your own provider key in Settings.</div>
+          <form id="chat-form" class="chat-compose"><textarea id="chat-input" rows="2" placeholder="Message Rizwan AI..." aria-label="Message Rizwan AI"></textarea><button type="submit" class="primary" id="send-chat">Send ↗</button></form><div class="chat-footer"><a href="https://chatgpt.com/" target="_blank" rel="noopener">Open official ChatGPT ↗</a><span>Rizwan AI is a separate service</span></div>
+        </div></div>
+    </section>
+    <section class="screen" id="screen-voice">
+      <div class="intro centered"><div class="eyebrow">REAL CONVERSATION</div><h1>Talk with Rizwan AI</h1><p>Speak naturally. The AI listens and replies out loud—this isn't a dictation button.</p></div>
+      <div class="voice-panel"><div id="voice-ring" class="voice-ring"><img src="assets/rizwan-avatar.webp" alt="Rizwan AI voice avatar"></div><h2>Rizwan AI Live Voice</h2><p class="voice-state" id="voice-status" role="status">Connect an OpenAI API key in Settings for live voice.</p>
+       <div class="voice-actions"><button class="primary" id="voice-start">🎙 Start voice</button><button class="secondary" id="voice-mute" disabled>Mute mic</button><button class="secondary danger" id="voice-stop" disabled>■ End</button></div><div class="voice-notice">Requires HTTPS, microphone permission, and a paid Realtime API connection. Sessions stop automatically after 90 seconds. New voice sessions are rate-limited. Voice audio is sent to the configured AI provider.</div></div>
+    </section>
+    <section class="screen" id="screen-web">
+      <div class="intro"><div class="eyebrow">BUILD SOMETHING NEW</div><h1>Website Creator</h1><p>Customize the page, preview it, and download your own <code>index.html</code>.</p></div>
+      <div class="two-cols"><div class="panel"><h2>Design your site</h2><label>Website name<input id="web-name" value="My Awesome Website" maxlength="70"></label><label>Subtitle<input id="web-subtitle" value="Welcome to my website!" maxlength="160"></label><label>Theme color<input type="color" id="web-color" value="#3b82f6"></label><label>About / intro<textarea id="web-body" rows="4">I made this website with Rizwan AI. Explore and have fun!</textarea></label><div class="button-row"><button class="primary" id="web-preview-btn">Update preview</button><button class="secondary" id="web-save-btn">Add to temporary Projects</button><button class="secondary" id="web-download-btn">Download HTML</button></div><hr><label>Or import your own HTML<input type="file" id="web-import" accept=".html,.htm,text/html"></label></div>
+      <div class="panel preview-panel"><h2>Live preview</h2><iframe id="web-frame" title="Website preview" sandbox=""></iframe></div></div>
+    </section>
+    <section class="screen" id="screen-apps">
+      <div class="intro"><div class="eyebrow">WINDOWS APP PROJECTS</div><h1>Python & Java Builder</h1><p>Make a download kit for a Windows EXE installer. A web browser cannot compile Windows installers itself.</p></div>
+      <div class="panel narrow-panel"><label>Language<select id="app-language"><option value="python">Python</option><option value="java">Java</option></select></label><label>Version<select id="app-version"></select></label><label>App / launcher name (no .exe needed)<input id="app-name" value="MyCoolApp" maxlength="40"></label><label>Upload your code or JAR and extra resources<input id="app-files" type="file" multiple></label><label>Upload your app logo (PNG, JPG, or ICO)<input id="app-icon" type="file" accept=".png,.jpg,.jpeg,.ico,image/png,image/jpeg,image/x-icon"></label><div class="button-row"><button class="primary" id="app-kit">Download build kit ZIP</button></div><div id="app-notice" class="hint">The ZIP contains your files and an easy Windows build script. You still need a compatible Python/JDK environment on a Windows computer to produce the final .exe.</div></div>
+    </section>
+    <section class="screen" id="screen-projects">
+      <div class="intro"><div class="eyebrow">YOUR COLLECTION</div><h1>My Projects</h1><p>Projects are temporary this visit. Download or export your project backup before closing.</p></div><div class="panel"><div class="button-row"><button id="export-backup" class="secondary">Download backup</button><button id="import-backup" class="secondary">Import backup</button><input type="file" id="backup-input" accept=".json" hidden></div><div id="project-list" class="projects-list"></div></div>
+    </section>
+    <section class="screen" id="screen-profile">
+      <div class="intro"><div class="eyebrow">PERSONAL SPACE</div><h1>Make it yours</h1><p>Customize your look for this session. It resets when you reopen the website.</p></div><div class="panel profile-panel"><img src="assets/rizwan-avatar.webp" alt="Rizwan AI mascot"><div><label>Display name<input id="profile-name" maxlength="40" placeholder="Your name"></label><label>Favourite accent colour<input id="profile-color" type="color" value="#4b9aff"></label><label>Your bio<textarea rows="3" id="profile-bio" maxlength="250" placeholder="A little about yourself..."></textarea></label><button id="profile-save" class="primary">Save profile</button><p class="micro">This temporary profile resets at the next visit. It is not a secure online account or ChatGPT login.</p></div></div>
+    </section>
+    <section class="screen" id="screen-settings">
+      <div class="intro"><div class="eyebrow">AI CONNECTION</div><h1>Settings & setup</h1><p>Change the connection without editing code or restarting a Windows launcher.</p></div>
+      <div class="panel narrow-panel"><h2>Choose your own AI</h2>
+      <div class="status-card" id="setup-status">Checking connection...</div>
+      <label>AI provider<select id="ai-provider"><option value="openai">OpenAI</option><option value="openrouter">OpenRouter</option><option value="groq">Groq</option><option value="together">Together AI</option><option value="deepseek">DeepSeek</option><option value="mistral">Mistral</option><option value="gemini">Google Gemini</option></select></label>
+      <label>Model name<input id="ai-model" value="gpt-4.1-mini" autocomplete="off" maxlength="120" spellcheck="false"></label>
+      <label>Your own provider API key<input id="ai-key" type="password" placeholder="Paste your API key here" autocomplete="off" spellcheck="false"></label>
+      <div class="button-row"><button class="primary" id="ai-connect">Use this key (this visit only)</button><button class="secondary" id="ai-forget">Forget key</button><button class="secondary" id="check-connection">Check server</button></div>
+      <p class="hint" id="ai-provider-note">Text chat and OpenAI live voice are supported.</p>
+      <p class="hint" id="ai-help">No Netlify variables are required. Each person supplies an API key from a SUPPORTED provider. Keys are held only in this browser tab and sent through the site's Netlify Function to that provider. Refreshing clears the key; it is never put into HTML or local storage. Use only a trusted site.</p>
+      <p class="hint">A key from just any website will not work: it must be a supported AI provider's compatible API. ChatGPT.com is a website, not an API key. Real voice requires an OpenAI Realtime-capable key.</p>
+      <p class="hint">Each visitor uses their own API account and may incur charges. Use your parent’s permission before entering paid API credentials. Do not use shared or school API keys.</p><hr><h3>ChatGPT</h3><p class="hint">This website is independent. ChatGPT accounts and private conversations do not transfer to Rizwan AI.</p><a class="link-button" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT ↗</a></div>
+    </section>
+    </main><footer class="footer">Made for learning and creativity · Rizwan AI is independent, not affiliated with OpenAI. Hosted AI usage may incur charges.</footer>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

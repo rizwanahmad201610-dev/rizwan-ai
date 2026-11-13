@@ -1,0 +1,34 @@
+RIZWAN AI — PRIVATE-TO-EACH-DEVICE, BRING-YOUR-OWN-KEY EDITION
+==============================================================
+
+WHAT CHANGED (everything else is preserved)
+1. Every visit starts with a new temporary chat list, guest profile, and project workspace.
+2. Press SAVE CHATS to keep chat history in the browser on THIS device only.
+3. Press LOAD SAVED CHATS to restore that history on this device. Nothing loads automatically.
+4. Saved chats NEVER sync to other computers. Press DELETE LOCAL SAVE to erase manually saved chats here.
+5. AI SETTINGS allows you to choose a supported provider, enter a model name and paste your own API key.
+6. Keys last only until page refresh/close, and are NEVER saved in localStorage, HTML, or Netlify environment variables. Netlify Functions forward each request to the selected, allowlisted provider.
+7. Real live voice uses an OPENAI key with Realtime API access. Other providers currently support text chat.
+8. Existing website creator, Python/Java builder, projects and logo are retained.
+
+HOW TO UPDATE EXISTING NETLIFY SITE
+1. Extract this ZIP file.
+2. Open app.netlify.com, select your EXISTING Rizwan AI site.
+3. Go to Deploys and upload the FULL extracted folder (containing netlify.toml, public/ and netlify/functions/).
+4. Wait for a successful deployment, then hard refresh the published page (Ctrl+Shift+R).
+5. Visit AI Settings, choose one of the providers, paste that provider's API key and set its model. Click Use this key.
+6. Open Chat and type a message. If you want voice, use an OpenAI key and click Live Voice.
+7. Press Save Chats if you want to keep the conversation; it will not load automatically next visit.
+
+NO VARIABLES NEEDED
+- There is NO requirement to add OPENAI_API_KEY or RIZWAN_ACCESS_CODE to Netlify.
+- Remove those old environment variables from Netlify after you redeploy. They are unused by this version, and removing them reduces accidental exposure/billing risk.
+
+IMPORTANT REAL LIMITATIONS
+- A key from any random website DOES NOT work. It has to be an API key compatible with one of the listed providers: OpenAI, OpenRouter, Groq, Together, DeepSeek, Mistral, or Google Gemini.
+- Keys entered into a third-party public site are sensitive. Review the site and get a parent's approval before entering a paid key. Only use your own provider key and never share it in chats.
+- Your key passes through the site's Netlify Function to the selected provider; it is not retained by the app, but the hosting/provider platforms have their own operational logs and policies.
+- Anyone can visit without a password, but each visitor must supply a provider key to use paid AI services.
+- The website editor and Java/Python download tools work in-browser; the site does NOT compile Windows .exe installers on Netlify.
+- Manually saved chats are only as durable as this browser's local storage. Clearing site data or using private/incognito browsing may erase them. Export/download a backup for extra safety.
+- Existing exported project backups are portable JSON; this differs from automatic sharing between devices.
